@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 25 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 15% 15%;
+
+    /* Nature-inspired primary: Deep forest green */
+    --primary: 145 60% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Earthy secondary: Warm soil brown */
+    --secondary: 25 40% 85%;
+    --secondary-foreground: 25 30% 20%;
+
+    --muted: 120 15% 95%;
+    --muted-foreground: 25 15% 50%;
+
+    /* Fresh accent: Vibrant leaf green */
+    --accent: 120 45% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 15% 90%;
+    --input: 120 15% 95%;
+    --ring: 145 60% 25%;
+
+    --radius: 0.75rem;
+    
+    /* Custom agriculture-themed tokens */
+    --nature-primary: 145 60% 25%;
+    --nature-light: 120 45% 85%;
+    --earth-warm: 25 45% 65%;
+    --earth-dark: 25 30% 20%;
+    --growth-green: 120 45% 45%;
+    --fresh-green: 95 55% 75%;
+    
+    /* Gradients */
+    --gradient-nature: linear-gradient(135deg, hsl(var(--nature-primary)), hsl(var(--growth-green)));
+    --gradient-earth: linear-gradient(180deg, hsl(var(--earth-warm)), hsl(var(--earth-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--nature-primary) / 0.95), hsl(var(--growth-green) / 0.9));
+    
+    /* Shadows */
+    --shadow-nature: 0 10px 30px -10px hsl(var(--nature-primary) / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(var(--nature-primary) / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 25 15% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 25 15% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 120 45% 75%;
+    --primary-foreground: 25 15% 8%;
+
+    --secondary: 25 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 25 10% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 120 45% 65%;
+    --accent-foreground: 25 15% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 15%;
+    --ring: 120 45% 75%;
+    
+    /* Dark mode nature tokens */
+    --nature-primary: 120 45% 75%;
+    --nature-light: 120 30% 40%;
+    --earth-warm: 25 35% 45%;
+    --earth-dark: 25 20% 12%;
+    --growth-green: 120 45% 65%;
+    --fresh-green: 95 45% 55%;
+    
+    --gradient-nature: linear-gradient(135deg, hsl(var(--nature-primary)), hsl(var(--growth-green)));
+    --gradient-earth: linear-gradient(180deg, hsl(var(--earth-warm)), hsl(var(--earth-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--nature-primary) / 0.2), hsl(var(--growth-green) / 0.15));
+    
+    --shadow-nature: 0 10px 30px -10px hsl(var(--nature-primary) / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsl(var(--nature-primary) / 0.1);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
